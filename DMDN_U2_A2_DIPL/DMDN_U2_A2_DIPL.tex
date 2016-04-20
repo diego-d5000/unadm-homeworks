@@ -1,0 +1,136 @@
+\documentclass[spanish,12pt,letterpapper]{article}
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[width=0.6\textwidth]{../logoUnADM}~\\[1cm] 
+			\textsc{Universidad Abierta y a Distancia de México}\\[0.8cm]
+			\textsc{Desarrollo de Software}\\[1.8cm]
+			
+			\textbf{ \Large Actividad 2. Uso del BPMN}\\[3cm]
+			
+			Diego Antonio Plascencia Lara\\ ES1421004131 \\[0.4cm]
+			Facilitador(a): Julia Alicia Reyes Rios\\
+			Materia: Modelado de Negocios\\
+			Grupo: DS-DMDN-1601-B1-007 \\
+			Unidad: II \\
+			
+			\vfill México D.F\\{\today}
+			
+		\end{center}
+	\end{titlepage}
+	
+	\section{Proceso a Diagramar}
+	
+	``EL ENTRENAMIENTO AUDITIVO INTERACTIVO''\\
+	
+	``El entrenamiento auditivo de un músico es una de las tareas más importantes para su vida profesional. En su etapa formativa es uno de los aspectos que deberían considerarse prioritarios, sin embargo, esto no necesariamente ocurre. Es una labor tediosa y difícil de llevar a cabo, especialmente en su etapa inicial. Para cubrir esta necesidad primordial, un grupo de maestros de asignaturas teórico musicales decidió plantear un subproyecto PAPIME para la implementación de un Laboratorio de Entrenamiento Auditivo Interactivo en la Escuela Nacional de Música, en donde los estudiantes pudieran acudir a trabajar de forma individual y utilizar programas computacionales que los ayudaran en su entrenamiento auditivo, mejorando la calidad de su formación musical''
+	
+	\section{Actividades}
+	Proceso ``Uso del Laboratorio'':\\
+	
+	\textbf{ALUMNO:\\}
+	
+	\textbf{Solicitar el Permiso de Uso del Recurso}
+	\begin{itemize}
+	\item dejar la credencial de estudiante en recepción.
+	\item esperar la indicación de que computadora esta libre.
+	\item proceder a el debido lugar.\\
+	\end{itemize}
+	
+	\textbf{Usar Software Correspondiente al Objetivo}
+	\begin{itemize}
+	\item iniciar sesión con el usuario ``Invitado''.
+	\item abrir el programa ``Ear Master School 4.0''.
+	\item iniciar la practica correspondiente a el alumno.\\
+	\end{itemize}
+	
+	\textbf{Terminar la Practica y Abandonar el Aula}
+	\begin{itemize}
+	\item cerrar el programa ``Ear Master School 4.0''.
+	\item cerrar la sesión del usuario en la computadora.
+	\item apagar el equipo de computa.
+	\item indicar al recepcionista o encargado el equipo usado y el termino de la practica.
+	\item recoger credencial.\\
+	\end{itemize}
+	
+	\textbf{RECEPCIONISTA:\\}
+	
+	\textbf{Otorgar Recursos}
+	\begin{itemize}
+	\item recoger identificación escolar al interesado en usar el equipo de computo.
+	\item visualizar en el sistema las computadoras libres.
+	\item indicar al interesado la computadora que debe usar.
+	\item registrar el uso en el sistema.\\
+	\end{itemize}
+	
+	\textbf{Verificar el correcto uso de los recursos}
+	\begin{itemize}
+	\item realizar inspecciones remotas del correcto uso del software.
+	\item atender peticiones de asistencias técnicas. 
+	\item registrar fallas en el sistema a la dirección general de computo.
+	\item levantar sanciones a quien sea sorprendido haciendo mal uso de los recursos.\\
+	\end{itemize}
+	
+	\textbf{Registrar Salidas}
+	\begin{itemize}
+	\item verificar el correcto apagado del equipo.
+	\item registrar la salida en el sistema.
+	\item regresar identificacion escolar al interesado.\\
+	\end{itemize}
+	
+	
+	\textbf{Dar mantenimiento al equipo de computo}
+	\begin{itemize}
+	\item realizar la limpieza a los equipos de computo.
+	\item borrar archivos basura de los sistemas.
+	\item hacer actualizaciones de los programas informáticos.
+	\item verificar el correcto funcionamiento de antivirus.\\
+	\end{itemize}
+	
+	\textbf{DIRECCION GENERAL DE COMPUTO:\\}
+	
+	\textbf{Atender Solicitudes de Reemplazo de Equipo}
+	\begin{itemize}
+	\item verificar solicitudes de equipo inservible.
+	\item reemplazar el equipo dañado.
+	\end{itemize}
+	
+	\section{Procesos de negocio}
+	Se satisfacen las necesidades de tal manera que se cuenta con el proceso requerido para tener un control en el laboratorio para el entrenamiento auditivo, se desglosan las actividades de este proceso, por distintas entidades.
+	
+	\section{Planteamientos BPMN}
+	El proceso ``Uso del Laboratorio' empieza y termina con el objeto ``Evento Simple''.\\
+	
+	Cada entidad (alumno, recepcionista, dgdc) puede representar un hilo, y un evento.\\
+	
+	Las actividades ``Usar Software Correspondiente al Objetivo'', ``Terminar la Practica y Abandonar el Aula'', ``Registrar Salidas'', ``Dar mantenimiento al equipo de computo'' y ``Atender Solicitudes de Reemplazo de Equipo'' son Tareas con subprocesos.\\
+	
+	Mientras que ``Otorgar Recursos'' y ``Solicitar el Permiso de Uso del Recurso'' son Tareas de Usuario.\\
+	
+	Se puede agregar un condicional en donde requiere de un usuario, ya que si no se identifica el proceso termina.\\
+	
+	\section{Relación de elementos  BPMN}
+	Se usan objetos de Flujo/Linea de Secuencia para indicar la secuencia, las actividades están ordenadas conforme a la secuencia.\\
+	
+	Hay flujo de mensaje entre ``Otorgar Recursos'' - ``Solicitar el Permiso de Uso del Recurso'' y ``Dar mantenimiento al equipo de computo'' - ``Atender Solicitudes de Reemplazo de Equipo''
+	
+	Hay 2 flujos condicionales en ``Otorgar Recursos'' - ``Solicitar el Permiso de Uso del Recurso''
+	
+	\pagebreak
+	\begin{thebibliography}{9}
+	\bibitem{maturanaModelamiento} Object Management Group. 
+		\emph{Business Process Model and Notation}. {[} Fecha de consulta: \today {]}. Disponible en: \textless http://www.bpmn.org/ \textgreater	
+	
+		\bibitem{maturanaModelamiento} Maturana Ortiz, Jorge. 
+		\emph{Modelamiento de Software y Negocios}. {[} Fecha de consulta: \today {]}. Disponible en: \textless http://www.info.univ-angers.fr/pub/maturana/files/Modelamiento\_de\_Software\_y\_Negocios.pdf \textgreater
+		
+		\bibitem{panAdm} León León, Oyuky María \& Asato España, Julio Armando. 
+		\emph{La Importancia del Modelado de Procesos de
+			Negocio como Herramienta para la Mejora e
+			Innovación}. Panorama administrativo {[}en linea{]}, México. 2009, vol.4 num. 7  {[} Fecha de consulta: \today {]}. Disponible en: \textless http://132.248.9.34/hevila/Panoramaadministrativo/2009/no7/4.pdf \textgreater
+	\end{thebibliography}
+\end{document}

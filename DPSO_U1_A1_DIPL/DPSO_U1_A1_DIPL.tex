@@ -1,0 +1,65 @@
+\documentclass[spanish,12pt,letterpapper]{article}
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[width=0.6\textwidth]{../logoUnADM}~\\[1cm] 
+			\textsc{Universidad Abierta y a Distancia de México}\\[0.8cm]
+			\textsc{Desarrollo de Software}\\[1.8cm]
+			
+			\textbf{ \Large Actividad 1. Administración del procesador}\\[3cm]
+			
+			Diego Antonio Plascencia Lara\\ ES1421004131 \\[0.4cm]
+			Facilitador(a): NORA CHIRINO MARTINEZ\\
+			Asignatura: Programación de sistemas operativos\\
+			Grupo: DS-DPSO-1601-B2-005 \\
+			Unidad: I \\
+			
+			\vfill México D.F\\{\today}
+			
+		\end{center}
+	\end{titlepage}
+	
+	\section{Procesador}
+	El procesador o CPU son placas de silicio que pueden llevar a cabo cálculos a través de la electricidad y un reloj de cuarzo para partir esta en pulsos, lo que da como resultado un microchip capaz de hacer cálculos matemáticos a través de sistema binario.\\
+	
+	El CPU cuenta con 2 principales componentes, la ALU que permite hacer los calculos aritméticos y la CU que permite traer instrucciones de la memoria y llamar a la ALU por si estas necesitan algún calculo.
+	
+	\section{Multiprocesamiento y paralelismo}
+	\subsection{Definiciones}
+	\paragraph{Proceso.} Es una tarea ejecutada por el procesador, es decir son las instrucciones ejecutándose, cabe recalcar que no hay que confundir un proceso con las instrucciones en si, pues estas son entidades latentes, en su estado de ejecución si pueden ser llamadas procesos.
+	
+	\paragraph{Sistema multiproceso.} Son conocidos como sistemas paralelos o multinucleo, son sistemas con múltiples CPU's con comunicación cerrada y que comparten reloj, memoria, bus, sistemas periféricos y demás recursos. 
+	
+	\paragraph{Hilo}
+	Es una unidad básica de utilización del CPU, este tiene un thread ID, con su propio program counter, registers y stack. Un proceso puede tener uno o mas hilos y estos comparten recursos de la computadora (code, data, I/O files).
+	
+	\paragraph{Concurrencia}
+	Un sistema es concurrente cuando permite el progreso de mas de una tarea.
+	
+	\paragraph{Paralelismo}
+	Un sistema es paralelo cuando mas de una tarea se ejecutan al mismo tiempo, sin necesidad de intercambiar entre una y otra.
+	
+	\subsection{Semejanzas y diferencias}
+	Los conceptos pueden sonar confusos, pues el multiproceso se entiendo por varios procesos ejecutándose al mismo tiempo (paralelo) o simulando esta cualidad (concurrente), pues depende del procesador y de la administración de este a través del sistema operativo. El multiprocesamiento no se debe confundir con los sitemas de multiproceso pues esto se refiere a una maquina con un procesador con uno o mas núcleos, que es independiente de los hilos, pues dependiendo del modelo y arquitectura del o los CPU, un solo núcleo puede soportar desde 1, 4, 8 o mas hilos.
+	
+	Mientras que el paralelismo es un concepto que se refiere específicamente a la ejecución de mas de una tarea al mismo tiempo sin necesidad de intercambiar entre una y otra, esto esta relacionado con la concurrencia, que es el progreso de mas de una tarea con o sin paralelismo. Y una maquina dependiendo del sistema operativo y procesador puede ejecutar varios procesos concurrentemente así como los hilos de cada uno.
+	
+	\section{Conclusión}
+	Es importante conocer los conceptos, diferencias, semejanzas y relaciones entre los conceptos de hilos, concurrencia, paralelismo, proceso, multiprocesamiento, pues puede resultar confuso, pero cabe destacar que en el desarrollo de software de alto nivel actual gran parte del control de el multiprocesamiento y manejo de núcleos e hilos de estos concurrente, paralelo o no, es delegado a el sistema operativo. 
+	
+	
+	\pagebreak
+	\begin{thebibliography}{9}
+		\bibitem{Operating System Concepts} Silberschatz, A. Baer P. Gagne G.(2013).
+		\emph{Sistemas operativos modernos}. USA: Willey.
+		
+	\end{thebibliography}
+	
+	
+	
+	
+\end{document}

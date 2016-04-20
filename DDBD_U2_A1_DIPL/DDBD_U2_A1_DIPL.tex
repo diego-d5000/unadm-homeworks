@@ -1,0 +1,65 @@
+\documentclass[spanish,12pt,letterpapper]{article}
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[width=0.6\textwidth]{../logoUnADM}~\\[1cm] 
+			\textsc{Universidad Abierta y a Distancia de México}\\[0.8cm]
+			\textsc{Desarrollo de Software}\\[1.8cm]
+			
+			\textbf{ \Large Actividad 1.- Modelo entidad-relación.}\\[3cm]
+			
+			Diego Antonio Plascencia Lara\\ ES1421004131 \\[0.4cm]
+			Facilitador(a): CESAR ALEXIE CHAN PUC  \\
+			Materia: Diseño de Bases de Datos\\
+			Grupo: DS-DDBD-1601-B1-003 \\
+			Unidad: II \\
+			
+			\vfill México D.F\\{\today}
+			
+		\end{center}
+	\end{titlepage}
+	\section{Diagrama entidad-relación}
+	Antes de realizar el diagrama entidad-relación para esta actividad, decidí emplear una tabla, para primero identificar todas las entidad y atributos, para en el diagrama hacer las correspondencias de cardinalidad y conectar las entidades de una manera eficiente.
+	
+	\subsection{Identificación de atributos}
+	\begin{center}
+	\begin{tabular}{| p{4cm} | p{4cm} |}
+	\hline
+	
+	\textbf{Entidad} & \textbf{Atributos}\\
+	\hline
+	Automóvil (E. débil) & numero de serie (pk)\linebreak marca \linebreak modelo \linebreak color \linebreak precio \linebreak placas\\
+	\hline
+	Cliente (E. fuerte) & id (pk) \linebreak numero de IFE \linebreak nombre \linebreak dirección \linebreak ciudad \linebreak numero de teléfono. \linebreak automovilSerie (fk) \\
+	\hline
+	Revisión (E. fuerte) & id (pk) \linebreak cambio filtro \linebreak cambio aceite \linebreak cambio frenos \linebreak cambio otros \linebreak automovilSerie (fk) \\
+	
+	\hline	
+	\end{tabular}
+	\end{center}
+	
+	\subsection{Diagrama}
+		
+	\begin{center}
+	\includegraphics[width=1\textwidth]{./ermodel}~\\[1cm] 
+	\end{center}
+	
+	\section{Conclusión}
+	El diagrama de entidad-relación es importante por que te ayuda a identificar conceptualmente como organizar la base de datos de manera eficiente en base a los requerimientos y de la solución al problema, y al ser mas abstracto el diseño se puede implementar, cambiar, modificar, y optimizar mas fácilmente.\\
+	
+	Este diagrama es el mas utilizado y es análogo a un wireframe, lo que nos permite tener un prototipo de lo que será una base de datos. Y sin este prototipo probablemente sería mas tardado y difícil implementarla en un DBMS-
+	
+	\pagebreak
+	\begin{thebibliography}{9}		
+		\bibitem{rrhopkins} Robert J. Robbins. 
+		\emph{Database Fundamentals}. Johns Hopkins University, [Disponible en: http://www.esp.org/db-fund.pdf].
+		
+		\bibitem{elmasriynavathe} Ramez Elmasri and Shamkant Navathe. 
+		\emph{Fundamentals of Database Systems}. Pearson Education, [Disponible en: http://tinman.cs.gsu.edu/~raj/4710/f11/Ch01.pdf].
+
+	\end{thebibliography}
+
+\end{document}

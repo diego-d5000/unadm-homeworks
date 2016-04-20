@@ -1,0 +1,45 @@
+\documentclass[spanish,12pt,letterpapper]{article}
+\usepackage{graphicx}
+\usepackage{babel}
+\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[width=0.6\textwidth]{./logoUnADM}~\\[1cm] 
+			\textsc{Universidad Abierta y a Distancia de M\'exico}\\[0.8cm]
+			\textsc{Desarrollo de Software}\\[1.8cm]
+			
+			\textbf{ \Large Actividad 2. Identificación de errores en un método de búsqueda }\\[3cm]
+			
+			Diego Antonio Plascencia Lara\\ ES1421004131 \\[0.4cm]
+			Facilitador(a): Alejandro Francisco Marquez Fuentes\\
+			Asignatura: Estructura de datos\\
+			Grupo: DS-DEDA-1502S-B1-002 \\
+			Unidad: II \\
+			
+			\vfill M\'exico D.F\\{\today}
+			
+		\end{center}
+	\end{titlepage}
+	
+	\section{Distancia de Hamming \\}
+	
+	``En Teoría de la Información se denomina distancia de Hamming a la efectividad de los códigos de bloque y depende de la diferencia entre una palabra de código válida y otra. Cuanto mayor sea esta diferencia, menor es la posibilidad de que un código válido se transforme en otro código válido por una serie de errores. A esta diferencia se le llama distancia de Hamming, y se define como el número de bits que tienen que cambiarse para transformar una palabra de código válida en otra palabra de código válida.''\\
+	
+	Es decir que la distancia Hamming es una medida de error o de diferencia de numero de bits que hay entre un bloque (de bits, letras, números etc.) y otro. Por lo que la distancia Hamming entre ``01001010'' y ``01101100'' es 3 (3ro, 6to y 7mo bit).\\
+	
+	Normalmente se utiliza para el intercambio de datos, por ejemplo, en un cierto bloque de datos se coloca un bit final que dependiendo de si es par o non sus bits anteriores sera 1 o 0, si estos no coinciden se toma como un bloque de datos corruptos, esto se usa por normalmente en el intercambio de datos por cable telefónico entre una computadora y otra.
+	
+	\section{Conclusiones \\}
+	Nunca he hecho uso de esta herramienta en el desarrollo, pero pienso que se puede utilizar como una forma rápida de comprobar si hubo ruido en la transmisión de datos. Ya sea de un dispositivo a otro o internamente dentro de un sistema. Aunque principalmente para comprobar la corruptibilidad de los datos he escuchado mas el uso de hashes y criptografía asimétrica para esto.
+	
+	\pagebreak
+	
+	\begin{thebibliography}{9}
+		\bibitem{WikiWHamming} Wikipedia. 
+		\emph{Hamming weight}.  {[} Fecha de consulta: \today {]}. Disponible en: \textless https://en.wikipedia.org/wiki/Hamming\_weight \textgreater
+		
+		\bibitem{WikiDetErr} Wikipedia. 
+		\emph{Detección y corrección de errores}.  {[} Fecha de consulta: \today {]}. Disponible en: \textless https://es.wikipedia.org/wiki/Detecci\%C3\%B3n\_y\_correcci\%C3\%B3n\_de\_errores \textgreater
+	\end{thebibliography}
+	
+\end{document}

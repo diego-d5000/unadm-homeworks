@@ -1,0 +1,152 @@
+\documentclass[spanish,12pt,letterpapper]{article}
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[width=0.6\textwidth]{../logoUnADM}~\\[1cm] 
+			\textsc{Universidad Abierta y a Distancia de México}\\[0.8cm]
+			\textsc{Desarrollo de Software}\\[1.8cm]
+			
+			\textbf{ \Large Actividad 2. Componentes de un Modelo de Negocios }\\[3cm]
+			
+			Diego Antonio Plascencia Lara\\ ES1421004131 \\[0.4cm]
+			Facilitador(a): Julia Alicia Reyes Rios\\
+			Materia: Modelado de Negocios\\
+			Grupo: DS-DMDN-1601-B1-007 \\
+			Unidad: IV \\
+			
+			\vfill México D.F\\{\today}
+			
+		\end{center}
+	\end{titlepage}
+	
+	\section{Caso de estudio}
+	Para esta actividad he decido elegir un caso de estudio genérico, una abacería o tienda común moderna. Este caso tiene un flujo básico que comienza con el proveedor y termina con el cliente, por lo que los actores, sus actividades y sub-actividades desglosadas quedarían de la siguiente manera:\\
+	
+	\textbf{PROVEEDOR:\\}
+	Elabora los productos\\
+	Abastece los productos que vende a la tienda.\\	
+	
+	\textbf{CLIENTE:\\}
+	Selecciona el producto.
+	\begin{itemize}
+	\item ve la lista de productos por las interfaces tecnológicas o acude a la tienda física
+	\item selecciona los productos de su agrado
+	\item agrega los productos a su "carrito" físico o digital\\
+	\end{itemize}
+	Paga la compra.
+	\begin{itemize}
+	\item revisa los productos que ha decidido comprar
+	\item si decide pagar con tarjeta la entrega para ser deslizada, sino entrega en efectivo
+	\item recibe un ticket de compra.\\
+	\end{itemize}
+	
+	\textbf{GERENTE:\\}
+	Realiza un control del inventario.
+	\begin{itemize}
+	\item recibe los productos del proveedor
+	\item verifica que estén en correcto estado
+	\item actualiza el "stock" en el sistema\\
+	\end{itemize}
+	Verifica las entradas de dinero.
+	\begin{itemize}
+	\item pide al sistema un reporte del total de ventas
+	\item verifica si coincide con el dinero en caja\\
+	\end{itemize}
+	Aplica estrategias de marketing.
+	\begin{itemize}
+	\item pide reportes al sistema de los productos mas vendidos y los menos vendidos
+	\item dependiendo de la zona y el inventario, anuncia promociones a los clientes\\
+	\end{itemize}
+	
+	\textbf{VENDEDOR:\\}
+	Da mantenimiento a la tienda.
+	\begin{itemize}
+	\item verifica que el sistema de computo funcione
+	\item hace la limpieza del lugar
+	\item acomoda los productos
+	\item pone el precio de cada producto en el mostrador\\
+	\end{itemize}
+	Atiende solicitudes de compra de los clientes.
+	\begin{itemize}
+	\item ayuda a encontrar productos
+	\item ayuda al proceso de compra\\
+	\end{itemize}
+	Recibe los pagos.
+	\begin{itemize}
+	\item revisa los productos que el cliente lleva
+	\item si decide pagar con tarjeta se le solicita al cliente para deslizarla, sino se pide el efectivo y si entrega el cambio si lo hay
+	\item entrega el ticket de compra\\
+	\end{itemize}
+	
+	\textbf{REPARTIDOR:\\}
+	Mantiene el vehículo en buen estado.
+	\begin{itemize}
+	\item se cerciora de que su equipo de seguridad este completo
+	\item verifica que el vehículo funcione y este en optimas condiciones\\
+	\end{itemize}
+	Atiende solicitudes de pedidos a domicilio.
+	\begin{itemize}
+	\item verifica en el sistema que no haya pedidos pendientes en la zona
+	\item si hay pedidos se traza una ruta y estimación de entrega
+	\item se toman los productos de la tienda solicitados por los clientes en linea\\
+	\end{itemize}
+	Entrega productos al domicilio del cliente.\\
+	Recibe los pagos.
+	\begin{itemize}
+	\item revisa los productos que el cliente lleva
+	\item si decide pagar con tarjeta se le solicita al cliente para deslizarla, sino se pide el efectivo y si entrega el cambio si lo hay
+	\item entrega el ticket de compra\\
+	\end{itemize}
+	
+	
+	\section{Modelo de Recursos}
+	\begin{tabular}{c c}
+	\hline
+	\textbf{Recursos Humanos} & \textbf{Recursos Materiales, Físicos, Datos}\\
+	\hline
+	Proveedor (externo) & Pedido (datos)\\
+	Cliente (externo) & Compras (datos)\\
+	Vendedor & Ubicaciones (datos)\\
+	Gerente & Clientes (datos)\\
+	Repartidor & Sistema de inventarios (datos)\\
+	& Sistema de compras (datos)\\
+	& Productos (material)\\
+	& Anaqueles (físico)\\
+	& Tablets (físico)\\
+	& Computadoras (físico)\\
+	\hline
+	\end{tabular}
+	
+	\section{Modelo de Metas}
+	Para modelar las metas utilizare el diagrama "Use Cases" de UML, ya que este también sirve para indicar las metas, o a lo que se pretende llegar para cada actor.
+	\begin{center}
+	\includegraphics[width=0.7\textwidth]{./UC}~\\[1cm] 
+	\end{center}
+	
+	\section{Atributos y Relaciones}
+	Para modelar los atributos y relaciones utilizare un diagrama relacional, este posteriormente puede servir para integrar una base de datos.
+	\begin{center}
+	\includegraphics[width=0.7\textwidth]{./rel}~\\[1cm] 
+	\end{center}
+	
+	\pagebreak
+	\begin{thebibliography}{9}
+	\bibitem{Alexander, Ian. Beus-Dukic, Ljerka} . 
+		\emph{Discovering Requirements: How to Specify Products snd Services}. England. Wiley
+	
+	\bibitem{maturanaModelamiento} Object Management Group. 
+		\emph{Business Process Model and Notation}. {[} Fecha de consulta: \today {]}. Disponible en: \textless http://www.bpmn.org/ \textgreater	
+	
+		\bibitem{maturanaModelamiento} Maturana Ortiz, Jorge. 
+		\emph{Modelamiento de Software y Negocios}. {[} Fecha de consulta: \today {]}. Disponible en: \textless http://www.info.univ-angers.fr/pub/maturana/files/Modelamiento\_de\_Software\_y\_Negocios.pdf \textgreater
+		
+		\bibitem{panAdm} León León, Oyuky María \& Asato España, Julio Armando. 
+		\emph{La Importancia del Modelado de Procesos de
+			Negocio como Herramienta para la Mejora e
+			Innovación}. Panorama administrativo {[}en linea{]}, México. 2009, vol.4 num. 7  {[} Fecha de consulta: \today {]}. Disponible en: \textless http://132.248.9.34/hevila/Panoramaadministrativo/2009/no7/4.pdf \textgreater
+	\end{thebibliography}
+\end{document}

@@ -1,0 +1,38 @@
+\documentclass[spanish,12pt,letterpapper]{article}
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[width=0.6\textwidth]{../logoUnADM}~\\[1cm] 
+			\textsc{Universidad Abierta y a Distancia de México}\\[0.8cm]
+			\textsc{Desarrollo de Software}\\[1.8cm]
+			
+			\textbf{ \Large Actividad 1. Foro Flujo único vs flujo múltiple}\\[3cm]
+			
+			Diego Antonio Plascencia Lara\\ ES1421004131 \\[0.4cm]
+			Facilitador(a): LETICIA MARIA ANGELES GONZALEZ\\
+			Asignatura: Programación orientada a objetos III\\
+			Grupo: DS-DPO3-1502S-B2-002 \\
+			Unidad: II \\
+			
+			\vfill México D.F\\{\today}
+			
+		\end{center}
+	\end{titlepage}
+	
+	Para esta actividad elegí un fragmento de código de una aplicación para Android, la cual realiza una petición GET a una API, pero esta es hecha por medio de una clasa llamada "AsyncTask", pero no es mas que una implementación de los Threads de Java como se muestra en el código de dicha clase del framework de Android.\\
+	
+	Fragmento de App Android:\\
+	\url{https://github.com/silmood/RequestsExamples/blob/8a5923b756c7f67550031e068d36463be57b49c0/app/src/main/java/mx/devf/eventfulrequests/async/AsyncTaskRequest.java}\\
+	
+	Codigo de AsyncTask:\\ \url{https://github.com/android/platform_frameworks_base/blob/master/core/java/android/os/AsyncTask.java}\\
+	
+	\paragraph{Flujo Unico:} El flujo único es como la ``programación secuencial pura'', es decir que el programa sigue un único flujo, sentido, hilo, ejecutando instrucción por instrucción ``de cabeza a pies'' ``sin desviarse'' y sin ejecutar la siguiente instrucción hasta que la actual este completa.
+	
+	\paragraph{Flujo Multiple: } A diferencia del flujo único, el flujo múltiple, son diferentes flujos desprendidos del flujo principal. Por lo que la descripción del flujo múltiple es contraria a la anterior, pues esta sigue varios hilos y sentidos, esta relacionada con la ``programación no obstructora'' por lo que un programa principal no tiene que ejecutar secuencialmente todas las instrucciones, ya que puede continuar con las siguientes dejando a otro hilo ocuparse de alguna instrucción pesada. Con esto vienen las llamadas ``tareas asíncronas'' y los ``callbacks''.
+	
+	
+\end{document}

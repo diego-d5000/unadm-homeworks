@@ -1,0 +1,116 @@
+\documentclass[spanish,12pt,letterpapper]{article}
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[width=0.6\textwidth]{../logoUnADM}~\\[1cm] 
+			\textsc{Universidad Abierta y a Distancia de México}\\[0.8cm]
+			\textsc{Desarrollo de Software}\\[1.8cm]
+			
+			\textbf{ \Large Actividad 2. Modelo jerárquico y de red}\\[3cm]
+			
+			Diego Antonio Plascencia Lara\\ ES1421004131 \\[0.4cm]
+			Facilitador(a): CESAR ALEXIE CHAN PUC  \\
+			Materia: Diseño de Bases de Datos\\
+			Grupo: DS-DDBD-1601-B1-003 \\
+			Unidad: II \\
+			
+			\vfill México D.F\\{\today}
+			
+		\end{center}
+	\end{titlepage}
+	\section{Identificación de atributos}
+	Antes de realizar el diagrama entidad-relación para esta actividad, decidí emplear una tabla, para primero identificar todas las entidad y atributos, para en el diagrama hacer las correspondencias de cardinalidad y conectar las entidades de una manera eficiente.
+	
+		\begin{center}
+	\begin{tabular}{| p{4cm} | p{4cm} |}
+	\hline
+	
+	\textbf{Entidad} & \textbf{Atributos}\\
+	\hline
+	Proveedor & clave\_proveedor \linebreak nombre \linebreak dirección \linebreak teléfono \linebreak pagina web\\
+	\hline
+	Cliente & clave\_cliente \linebreak nombre \linebreak dirección \linebreak teléfono\\
+	\hline
+	Producto & clave\_unica\_producto \linebreak nombre \linebreak precio actual \linebreak stock \linebreak nombre de proveedor \\
+	\hline
+	Categoría & clave\_categoria \linebreak nombre \linebreak descripción \\
+	\hline
+	Dirección & calle \linebreak numero \linebreak comuna \linebreak ciudad	\\	
+	\hline
+	Venta & clave\_venta \linebreak fecha \linebreak cliente \linebreak descuento \linebreak monto final \\
+	\hline
+	Teléfono & numero\\
+		
+	\hline	
+	\end{tabular}
+	\end{center}
+	
+	\section{Modelo jerárquico}
+	
+	\subsection{Conceptos}
+	\paragraph{Segmento.} tiene campos (atributos), un segmento representa una entidad, y son nodos del árbol.
+	\paragraph{Campo.} Es un atributo de la entidad.	
+	\paragraph{N. Raíz.} Es el nodo inicial en el árbol y no tiene nodos padres, pero si nodos hijos.
+	\paragraph{N. Padre.} Es un nodo que tiene otros subnodos (nodos hijos)
+	\paragraph{N. Hijo.} Es un nodo que desciende de otro (nodo padre).\\
+	
+	\subsection{Diagrama}
+	\begin{center}
+	\includegraphics[width=0.8\textwidth]{./jerarquico}~\\[1cm]
+	\end{center}
+	\pagebreak
+	
+	\subsection{Explicación}
+	
+	En este diagrama se observan tres arboles, el primero que solo denota la relación 1:N entre categoría y producto, es decir una categoría tiene muchos productos y un producto solo tiene una categoría.\\
+	
+	El segundo árbol comienza con el Cliente el cual tiene teléfonos y direcciones (suponiendo que puede tener diferentes direcciones de entrega como casa o trabajo). Así como una venta tiene un solo cliente pero un cliente puede tener muchas ventas, las cuales puedes ser de varios productos.\\
+	
+	El tercer árbol tiene productos que distribuye, teléfonos y direcciones (diferentes puntos de distribución).\\
+	\pagebreak
+	
+	\section{Modelo de red}
+Una base de datos en red, deriva de la jerárquica pues esta trata de solucionar los problemas que tenía, como por ejemplo las relaciones N:M que no estaban permitidas en las jerárquicas, son permitidas en las de red mediante el uso de mas de un nodo padre.
+
+Una base de datos en red es una colección de registros (records) y las relaciones de los registros están dadas por enlaces (links).
+	
+	\subsection{Conceptos}
+	\paragraph{Registro (records).} Es análogo a una entidad en el modelo E-R, y es un nodo en la red.\\
+	
+	\paragraph{Campo (field).} Un campo esta dentro de un registro/nodo de la red, y este es análogo a un atributo de la entidad.\\
+	
+	\paragraph{Enlace (link).} Es una asociación entre 2 registros, y es como se indican las relaciones entre entidades.
+	
+	\subsection{Diagrama}
+	
+	\begin{center}
+	\includegraphics[width=0.8\textwidth]{./jerarquico}~\\[1cm]
+	\end{center}
+	
+	\subsection{Explicación}
+	En este diagrama se observan los registros (Cliente, Venta, Proveedor, Dirección, Teléfono, Producto y Categoría) que aparecen solo una vez a diferencia del diagrama jerárquico, esto denota la omisión de repetir entidades/nodos o de tener mas de un conjunto, pues ahora un nodo puede tener mas de un nodo padre.\\
+	
+	El registro Teléfono y Dirección tienen dos nodos padres que son Cliente y Proveedor, pues tienen estos dos registros asociados en común. Después el registro Producto tiene tres nodos padres que son Categoría, Venta y Proveedor pues un producto tiene una categoría, esta presente en una venta y lo suministra un proveedor.
+	
+	
+	\pagebreak
+	\begin{thebibliography}{9}
+	
+	\bibitem{angelesmoraga} Baculima F. y Riofrio X. 
+		\emph{EL MODELO DE DATOS JERÁRQUICO}. Universidad de Cuenca, [Disponible en: http://es.slideshare.net/FBaculima/modelo-jerarquico-y-modelo-de-red-de-base-de-datos].	
+
+\bibitem{angelesmoraga} M. Ángeles Moraga de la Rubia. 
+		\emph{EL MODELO DE DATOS JERÁRQUICO}. UNIVERSIDAD DE CASTILLA-LA MANCHA, [Disponible en: http://www.infcr.uclm.es/www/fruiz/bda/doc/trab/T0001\_MAMoraga.pdf].	
+			
+		\bibitem{rrhopkins} Robert J. Robbins. 
+		\emph{Database Fundamentals}. Johns Hopkins University, [Disponible en: http://www.esp.org/db-fund.pdf].
+		
+		\bibitem{elmasriynavathe} Ramez Elmasri and Shamkant Navathe. 
+		\emph{Fundamentals of Database Systems}. Pearson Education, [Disponible en: http://tinman.cs.gsu.edu/~raj/4710/f11/Ch01.pdf].
+
+	\end{thebibliography}
+
+\end{document}

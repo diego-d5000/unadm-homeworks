@@ -1,0 +1,73 @@
+\documentclass[spanish,12pt,letterpapper]{article}
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[width=0.6\textwidth]{../logoUnADM}~\\[1cm] 
+			\textsc{Universidad Abierta y a Distancia de México}\\[0.8cm]
+			\textsc{Desarrollo de Software}\\[1.8cm]
+			
+			\textbf{ \Large Actividad 3. Modelo relacional}\\[3cm]
+			
+			Diego Antonio Plascencia Lara\\ ES1421004131 \\[0.4cm]
+			Facilitador(a): CESAR ALEXIE CHAN PUC  \\
+			Materia: Diseño de Bases de Datos\\
+			Grupo: DS-DDBD-1601-B1-003 \\
+			Unidad: II \\
+			
+			\vfill México D.F\\{\today}
+			
+		\end{center}
+	\end{titlepage}
+	\section{Identificación}
+	
+	\subsection{Entidades y atributos}
+	
+		\begin{center}
+	\begin{tabular}{| p{4cm} | p{4cm} |}
+	\hline
+	
+	\textbf{Entidad} & \textbf{Atributos}\\
+	\hline
+	Paciente & id\_paciente \linebreak nombre \linebreak apellidos \linebreak direccion \linebreak población \linebreak municipio \linebreak codigo\_postal \linebreak teléfono \linebreak fecha\_de\_nacimiento\\
+	\hline
+	Medico & id\_medico \linebreak nombre \linebreak apellidos \linebreak teléfono \linebreak especialidad\\
+	\hline
+	Ingreso & id\_ingreso \linebreak no\_habitacion \linebreak no\_cama \linebreak fecha\_de\_ingreso \\
+	\hline	
+	\end{tabular}
+	\end{center}
+	
+	\subsection{Relaciones}
+	
+	En este ejemplo solo hay una unica relación \textbf{N:M} entre \textbf{Paciente-Médico} que se refleja en la tabla Ingresos. Pero esta enrealidad no es mencionada y la tabla ingresos tiene otros atributos lo que la hace funcionar como una entidad, mas no es efecto de la relación, lo que da como resultado dos relaciones \textbf{1:N}, una de ellas entre \textbf{Médico-Ingreso} y la otra \textbf{Paciente-Ingreso}\\
+	
+	
+	\section{Diagrama\\}
+	
+	\begin{center}
+	\includegraphics[width=0.8\textwidth]{./relational}~\\[1cm] 
+    \end{center}
+    
+    \subsection{Explicación}
+    Al tratarse de dos relaciones 1:N entre P-I y M-I la tabla Ingresos debe tener como llave foránea el identificador de Paciente y Médico. Se Observa su identificador por PK y la llave foránea por FK, se denota la cardinalidad por el tipo de enlace.
+    
+    \section{Conclusión}
+    La diferencia entre el modelo entidad-relación y relacional es el tipo de artefactos utilizados en el diagrama, pues en el e-r se usan cuadrados con óvalos para representar una entidad con atributos y en el relacional se usan tablas, así como se eliminan los rombos que representaba un verbo y cardinalidad.\\
+    
+    Este modelo es mas comprensible pues da una rápida referencia visual al estructurado real de una BD y es el mas usado.
+	
+	\pagebreak
+	\begin{thebibliography}{9}	
+	
+		\bibitem{rrhopkins} Robert J. Robbins. 
+		\emph{Database Fundamentals}. Johns Hopkins University, [Disponible en: http://www.esp.org/db-fund.pdf].
+		
+		\bibitem{elmasriynavathe} Ramez Elmasri and Shamkant Navathe. 
+		\emph{Fundamentals of Database Systems}. Pearson Education, [Disponible en: http://tinman.cs.gsu.edu/~raj/4710/f11/Ch01.pdf].
+
+	\end{thebibliography}
+
+\end{document}

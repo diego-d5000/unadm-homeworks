@@ -1,0 +1,69 @@
+\documentclass[spanish,12pt,letterpapper]{article}
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[width=0.6\textwidth]{../logoUnADM}~\\[1cm] 
+			\textsc{Universidad Abierta y a Distancia de México}\\[0.8cm]
+			\textsc{Desarrollo de Software}\\[1.8cm]
+			
+			\textbf{ \Large Autorreflexión Unidad 2}\\[3cm]
+			
+			Diego Antonio Plascencia Lara\\ ES1421004131 \\[0.4cm]
+			Facilitador(a): CESAR ALEXIE CHAN PUC  \\
+			Materia: Diseño de Bases de Datos\\
+			Grupo: DS-DDBD-1601-B1-003 \\
+			Unidad: II \\
+			
+			\vfill México D.F\\{\today}
+			
+		\end{center}
+	\end{titlepage}
+	
+	\begin{itemize}
+	
+\item \textbf{¿Cuál es el objetivo del modelado de una base de datos?\\}
+Tener documentación sobre las bases de datos para hacerlas mas eficientes, administrables y escalables.\\
+	
+\item \textbf{Menciona las características del modelo entidad-relación\\}
+Es usado para un diseño conceptual, solo representa las entidades (rectángulos), sus atributos (ovalos) y sus relaciones por medio de flechas y verbos (rombos).\\
+
+\item \textbf{Menciona las características del modelo relacional.}
+Es muy usado, es útil para un diseño lógico y físico. Consta de tablas que representan entidades, estas tablas tienen los atributos y tipos de datos, las relaciones se representan con flechas que conllevan un significado dependiendo del tipo de flecha .\\
+
+\item \textbf{¿Cuáles son las diferencias del modelo entidad-relación con el modelado jerárquico?}
+El modelo entidad-relación sirve mas para una base de datos relacional y el jerárquico puede usarse pero no es adecuado y es menos comprensible. La diferencia principal son las relaciones, pues en el jerárquico no puede haber relaciones N:M entre 2 entidades de un mismo árbol.\\
+
+\item \textbf{¿Cuál es la diferencia entre el modelo relacional con el relacional extendido?}
+El relacional extendido introduce otros conceptos como herencia, generalización, categoría, etc.\\
+
+\item \textbf{Explica el modelado orientado a objetos.}
+Es similar al modelo relacional, pues de igual manera maneja tablas, con atributos, tipos de datos y relaciones, pero el orientado a objetos introduce los métodos o acciones que puede tener una entidad, asi como sus atributos pasan a ser propiedades con modificadores de acceso y otros conceptos.\\
+
+\item \textbf{¿Cuál es tu modelado favorito y justifica tu elección?}
+El orientado a objetos, por que aparte de su utilidad implícita en la programación orientada a objetos en general, en mi opinión es la mas útil al momento de pasar a la practica, pues actualmente se trabaja mas con ORMs o incluso con una simple implementación de alguna interfaz de las consultas que con consultas puras en SQL u otro QueryLanguage.\\
+    
+    Esto hace que en la practica se usen objetos para interactuar con la BD, es decir que el modelo orientado objetos nos permite tener una visualización real de las interacciones y accesibilidad que tendrán nuestros objetos, que es con lo finalmente estaremos usando, otra razón es que es muy útil si se requiere modelar una base de datos NoSQL basada en documentos, pues al estar basada en objetos planos, este modelado es el mas apegado a lo requerido.\\
+
+	\end{itemize}
+	
+	\pagebreak
+	\begin{thebibliography}{9}
+	\bibitem{economiahoy} Economía Hoy México. 
+		\emph{Oxxo triunfa en el sector de las cadenas de ventas de conveniencia}. Economía Hoy, [Disponible en: http://www.economiahoy.mx/empresas-eAm-mexico/noticias/6861986/07/15/Oxxo-triunfa-en-el-sector-de-las-cadenas-de-ventas-de-conveniencia.html].
+		
+		\bibitem{rrhopkins} Robert J. Robbins. 
+		\emph{Database Fundamentals}. Johns Hopkins University, [Disponible en: http://www.esp.org/db-fund.pdf].
+		
+		\bibitem{elmasriynavathe} Ramez Elmasri and Shamkant Navathe. 
+		\emph{Fundamentals of Database Systems}. Pearson Education, [Disponible en: http://tinman.cs.gsu.edu/~raj/4710/f11/Ch01.pdf].
+		
+		\bibitem{psqldocs} The PostgreSQL Development Team. 
+		\emph{PostgreSQL 7.0 Docs}. PostgreSQL, [Disponible en: http://www.postgresql.org/docs/7.0/static/postgres.htm].
+		
+
+	\end{thebibliography}
+
+\end{document}

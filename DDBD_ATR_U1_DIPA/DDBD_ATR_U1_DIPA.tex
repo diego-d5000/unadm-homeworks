@@ -1,0 +1,65 @@
+\documentclass[spanish,12pt,letterpapper]{article}
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[width=0.6\textwidth]{../logoUnADM}~\\[1cm] 
+			\textsc{Universidad Abierta y a Distancia de México}\\[0.8cm]
+			\textsc{Desarrollo de Software}\\[1.8cm]
+			
+			\textbf{ \Large Autorreflexión Unidad 1}\\[3cm]
+			
+			Diego Antonio Plascencia Lara\\ ES1421004131 \\[0.4cm]
+			Facilitador(a): CESAR ALEXIE CHAN PUC  \\
+			Materia: Diseño de Bases de Datos\\
+			Grupo: DS-DDBD-1601-B1-003 \\
+			Unidad: I \\
+			
+			\vfill México D.F\\{\today}
+			
+		\end{center}
+	\end{titlepage}
+	
+	\begin{itemize}
+	\item \textbf{Diferencia entre una BDD y un SGBDD\\}
+	Una base de datos es un concepto que se define por ser el conjunto de información almacenada para su posterior uso y un sistema gestor de base de datos se encarga de gestionar esta. La diferencia esta en que uno es la información, mientras que la otra la gestiona.\\
+	
+\item \textbf{Menciona las funciones básicas de un SGBD (DBMS)\\}
+Consulta y actualización: es decir el recuperar, y modificar la información en la base de datos.\\
+Mantenimiento de esquemas: las tablas que creamos, donde se define una entidad, sus atributos y tipos de datos.\\
+Manejo de transacciones: la ejecución de sentencias que intervienen con los datos deben tener la seguridad de que serán hechas "todas o ninguna" y procedimental.\\
+
+\item \textbf{Define el concepto de DISEÑO DE BDD.}
+Es el definir de la estructura de datos que debe tener una base de datos de un sistema de información determinada.\\
+
+\item \textbf{De los componentes del DISEÑO DE BDD, ¿Cuál consideras es el más importante y por qué?}
+El lógico, por que es un punto intermedio, es un diseño no tan abstracto como el conceptual que podría llegar a dificultar la visualización del aspecto practico, pero no es tan concreto como el diseño físico como para ser tan dependiente de un SGBD especifico.\\
+
+\item \textbf{De los SGBD (DBMS) que existen en el mercado cual es el de tu elección e indica la razón por la cual lo elegiste.}
+PostgreSQL, por que esta basada en la arquitectura cliente-servidor, donde el cliente consta de un daemon/servicio (postmaster) escuchando las peticiones de los clientes para después iniciar un proceso postgres que realiza la gestión de la información. PostgreSQL puede manejar múltiples conexiones concurrentes de clientes, tiene una biblioteca en C, para crear aplicaciones cliente y es totalmente open source.\\
+
+\item \textbf{¿Cuál es el objetivo del DISEÑO DE BDD?}
+Tener un proceso estructurado y definido para la creación de estructuras de datos. Tener documentación sobre las bases de datos. Hacerlas mas eficientes, administrables y escalables. 
+
+	\end{itemize}
+	
+	\pagebreak
+	\begin{thebibliography}{9}
+	\bibitem{economiahoy} Economía Hoy México. 
+		\emph{Oxxo triunfa en el sector de las cadenas de ventas de conveniencia}. Economía Hoy, [Disponible en: http://www.economiahoy.mx/empresas-eAm-mexico/noticias/6861986/07/15/Oxxo-triunfa-en-el-sector-de-las-cadenas-de-ventas-de-conveniencia.html].
+		
+		\bibitem{rrhopkins} Robert J. Robbins. 
+		\emph{Database Fundamentals}. Johns Hopkins University, [Disponible en: http://www.esp.org/db-fund.pdf].
+		
+		\bibitem{elmasriynavathe} Ramez Elmasri and Shamkant Navathe. 
+		\emph{Fundamentals of Database Systems}. Pearson Education, [Disponible en: http://tinman.cs.gsu.edu/~raj/4710/f11/Ch01.pdf].
+		
+		\bibitem{psqldocs} The PostgreSQL Development Team. 
+		\emph{PostgreSQL 7.0 Docs}. PostgreSQL, [Disponible en: http://www.postgresql.org/docs/7.0/static/postgres.htm].
+		
+
+	\end{thebibliography}
+
+\end{document}

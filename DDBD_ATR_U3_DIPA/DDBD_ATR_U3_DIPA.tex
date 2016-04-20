@@ -1,0 +1,88 @@
+\documentclass[spanish,12pt,letterpapper]{article}
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[width=0.6\textwidth]{../logoUnADM}~\\[1cm] 
+			\textsc{Universidad Abierta y a Distancia de México}\\[0.8cm]
+			\textsc{Desarrollo de Software}\\[1.8cm]
+			
+			\textbf{ \Large Autorreflexión Unidad 3}\\[3cm]
+			
+			Diego Antonio Plascencia Lara\\ ES1421004131 \\[0.4cm]
+			Facilitador(a): CESAR ALEXIE CHAN PUC  \\
+			Materia: Diseño de Bases de Datos\\
+			Grupo: DS-DDBD-1601-B1-003 \\
+			Unidad: III \\
+			
+			\vfill México D.F\\{\today}
+			
+		\end{center}
+	\end{titlepage}
+	
+	\begin{itemize}
+	
+\item \textbf{¿Cuál es el objetivo del álgebra relacional?\\}
+El de denotar con un lenguaje teórico, el álgebra y parte de teoría de conjuntos, las operaciones básicas para la obtención de datos de una DB.\\
+	
+\item \textbf{¿Cuál es el objetivo del cálculo relacional?\\}
+El mismo objetivo del álgebra relacional, solo que esta no es procedimental, es de tipo declarativo, es decir solo indica que se desea obtener.\\
+
+\item \textbf{En una tabla menciona las principales sentencias de DDL.\\}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Sentencia} & \textbf{Función}\\
+\hline
+CREATE & crea nuevas tablas.\\
+\hline
+DROP & elimina tablas.\\
+\hline
+ALTER & modifica las tablas (campos y/o definiciones).\\
+\hline
+\end{tabular}
+\end{center}
+
+\item \textbf{En una tabla menciona las principales sentencias de DML\\}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Sentencia} & \textbf{Función}\\
+\hline
+SELECT & consulta los registros.\\
+\hline
+INSERT & introduce nuevos registros.\\
+\hline
+UPDATE & modifica los datos en los registros\\
+\hline
+DELETE & elimina registros\\
+\hline
+\end{tabular}
+\end{center}
+
+\item \textbf{Diferencia entre DDL y DML\\}
+el DDL sirve para definir el esquema (tablas) de los registros, mientras que el DML sirve para manipular registros que se basaron en estos esquemas.\\
+
+\item \textbf{¿Qué es una vista?\\}
+Encapsula una serie de instrucciones SQL regresando una supuesta nueva tabla para que se consulte directamente a esta evitando mostrar otras con datos sensibles implicadas.\\
+
+	\end{itemize}
+	
+	\pagebreak
+	\begin{thebibliography}{9}
+		
+		\bibitem{rrhopkins} Robert J. Robbins. 
+		\emph{Database Fundamentals}. Johns Hopkins University, [Disponible en: http://www.esp.org/db-fund.pdf].
+		
+		\bibitem{elmasriynavathe} Ramez Elmasri and Shamkant Navathe. 
+		\emph{Fundamentals of Database Systems}. Pearson Education, [Disponible en: http://tinman.cs.gsu.edu/~raj/4710/f11/Ch01.pdf].
+		
+		\bibitem{psqldocs} The PostgreSQL Development Team. 
+		\emph{PostgreSQL 7.0 Docs}. PostgreSQL, [Disponible en: http://www.postgresql.org/docs/7.0/static/postgres.htm].
+		
+
+	\end{thebibliography}
+
+\end{document}

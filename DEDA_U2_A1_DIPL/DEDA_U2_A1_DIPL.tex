@@ -1,0 +1,67 @@
+\documentclass[spanish,12pt,letterpapper]{article}
+\usepackage{graphicx}
+\usepackage{babel}
+\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[width=0.6\textwidth]{./logoUnADM}~\\[1cm] 
+			\textsc{Universidad Abierta y a Distancia de M\'exico}\\[0.8cm]
+			\textsc{Desarrollo de Software}\\[1.8cm]
+			
+			\textbf{ \Large Actividad 1. Metodos de Ordenacion }\\[3cm]
+			
+			Diego Antonio Plascencia Lara\\ ES1421004131 \\[0.4cm]
+			Facilitador(a): Alejandro Francisco Marquez Fuentes\\
+			Asignatura: Estructura de datos\\
+			Grupo: DS-DEDA-1502S-B1-002 \\
+			Unidad: II \\
+			
+			\vfill M\'exico D.F\\{\today}
+			
+		\end{center}
+	\end{titlepage}
+	
+	\section{Definiciones \\[1cm]}
+	
+	\paragraph{Sorting Algorithm.}
+	Es un algoritmo para colocar los elementos de una lista en un cierto orden. Se usan mas para ordenar elementos numéricos o lexicógrafos. Una ordenación eficiente es importante para optimizar el uso de otros algoritmos.
+	
+	\paragraph{Bubble Sort.}
+	Es un algoritmo de ordenación que repetidamente sus pasos atraviesan la lista para ser ordenada. Compara cada par de elementos y los intercambia si estos están en un orden incorrecto. El algoritmo atraviesa de la lista hasta que ya no sea necesario ningún cambio, lo cual indica que la lista esta ordenada. Es lento y no practico para muchos problemas, pero ayuda cuando se trata de listas previamente ordenadas y/o que tienen pocos datos fuera del orden.
+	
+	\paragraph{Insertion Sort.}
+	Es un algoritmo simple, que construye una lista ordenada final, elemento por elemento. Es mucho menos eficiente en listas grandes, pero funciona mejor con listas cortas. 
+	
+	\paragraph{Selection Sort.}
+	El algoritmo divide la lista de entrada en dos partes: la sublista de elementos ya ordenados, la cual esta construida de izquierda a derecha en la parte delantera (izquierda) de la lista; y una sublista de elementos restantes por ser ordenada que ocupa el resto de la lista. El algoritmo procede por buscar el mas pequeño (o grande) elemento en la sublista desordenada, intercambia el elemento mas a la izquierda de la lista desordenada y lo coloca en la lista ordenada.
+	
+	\paragraph{Quicksort.}
+	Es un algoritmo de ordenación eficiente, sigue la filosofía de "divide y vencerás. Primero se divide una lista grande en 2 sublistas mas pequeñas (los elementos mas grandes y los elementos mas pequeños a partir de un dato pivote seleccionado), y recursivamente ordena esas sublistas.
+	
+	\paragraph{Search Algorithm.}
+	Es un algoritmo para encontrar un elemento especifico en una colección de datos
+	
+	\pagebreak
+	
+	\section{Relaci\'on entre los algoritmos y las estructuras de datos \\}
+	La relaci\'on que existe entre un algoritmo (no necesariamente computacional) y las estructuras de datos no es directa, ya uno puede existir sin la necesidad del otro (dependiendo del contexto), pero directamente en las ciencias de la computaci\'on e implicitamente en la cotidianidad estas van ligadas. Esto por que normalmente un algoritmo necesita conocimiento (datos) para poder funcionar, puesto que a partir de la informaci\'on esta puede ser tratada para llegar finalmente a otro dato, o realizar alguna acci\'on gracias a estos. \\
+	
+	En palabras sencillas, un algoritmo necesita de la manipulaci\'on de estructuras de datos para poder funcionar, y los datos son in\'utiles sin un proceso que les de su utilidad. Por ejemplo si quisi\'eramos resolver un simple problema de pelar un pl\'atano, esto implica tener que conocer datos acerca de nosotros mismos, el objeto al que le realizaremos la acci\'on, medidas, ambiente, esto le da una utilidad a dichos datos.\\\\
+	
+	
+	\section{Conclusiones \\}
+	Los diferentes Algoritmos de ordenación y de búsqueda nos permiten manejar ciertos datos, y depende del tamaño o complejidad de estos el algoritmo que debamos utilizar. Normalmente no se aprecia mucho la importancia de estos algoritmos cuando se trabajan con datos vanos como números, pero buscadores como Google usan diferentes algoritmos de este tipo para poder mostrar y ordenar los resultados al teclear una búsqueda. \\
+	
+	Personalmente he usado el algoritmo "Bubble Sort" para ordenar los datos de una colección desordenada, y que se puedan mostrar en un orden especifico en una tabla (esto principalmente en desarrollo web).
+	
+	\pagebreak
+	
+	\begin{thebibliography}{9}
+		\bibitem{algsRobert} Sedgewick R. and Wayne K. 
+		\emph{Algorithms}. Princeton University, Princeton, 4th edition, 2011.
+		
+		\bibitem{Wikipedia} Wikipedia. 
+		\emph{Sorting Algorithm}.  {[} Fecha de consulta: \today {]}. Disponible en: \textless https://en.wikipedia.org/wiki/Sorting\_algorithm \textgreater
+	\end{thebibliography}
+	
+\end{document}

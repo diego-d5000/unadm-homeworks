@@ -1,0 +1,99 @@
+\documentclass[spanish,12pt,letterpapper]{article}
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[width=0.6\textwidth]{../logoUnADM}~\\[1cm] 
+			\textsc{Universidad Abierta y a Distancia de México}\\[0.8cm]
+			\textsc{Desarrollo de Software}\\[1.8cm]
+			
+			\textbf{ \Large Evidencia de aprendizaje. Modelo relacional extendido y orientado a objetos }\\[3cm]
+			
+			Diego Antonio Plascencia Lara\\ ES1421004131 \\[0.4cm]
+			Facilitador(a): CESAR ALEXIE CHAN PUC  \\
+			Materia: Diseño de Bases de Datos\\
+			Grupo: DS-DDBD-1601-B1-003 \\
+			Unidad: II \\
+			
+			\vfill México D.F\\{\today}
+			
+		\end{center}
+	\end{titlepage}
+	
+	\section{Planteamiento del Problema}	
+	''Se requiere desarrollar un sistema de base de datos para la administración de un establecimiento especializado en computación. El establecimiento dispone varios productos que se pueden vender a los clientes. De cada producto informático se desea registrar  el código\_producto, descripción, precio y número de existencias. De cada cliente se desea guardar el código\_cliente, nombre, apellidos, dirección y número de teléfono. Un cliente puede comprar varios productos en el establecimiento y un mismo producto puede ser comprado por varios clientes. Cada vez que se compra un artículo quedará registrada la compra en la base de datos junto con la fecha en la que se ha comprado el artículo. El establecimiento tiene contactos con varios proveedores que son los que suministran los productos. Un mismo producto puede ser suministrado por varios proveedores. De cada proveedor se desea guardar el código\_proveedor, nombre, apellidos, dirección, provincia y número de teléfono``	\\
+	
+	\subparagraph{Puntos a tratar}
+	\begin{itemize}
+	\item Mencionar las entidades y atributos del problema.
+	\item Menciona y explica las relaciones del problema.
+	\item En el diagrama debes indicar los conceptos de parámetros, variables y métodos.
+	\item Explica el diagrama.
+	\item Al final elabora una conclusión donde justifiques la elección del modelo con el cual planteaste el problema.
+	\end{itemize}
+	
+	
+	\section{Identificación}
+	
+	\subsection{Entidades y atributos}
+	
+		\begin{center}
+	\begin{tabular}{| p{4cm} | p{4cm} |}
+	\hline
+	
+	\textbf{Entidad} & \textbf{Atributos}\\
+	\hline
+	Producto & código\_producto \linebreak descripción \linebreak precio \linebreak numero\_de\_existencias\\
+	\hline
+	Cliente & cogido\_cliente \linebreak nombre \linebreak apellidos \linebreak dirección \linebreak numero\_de\_teléfono\\
+	\hline
+	Compra & fecha \\
+	\hline
+	Proveedor & cogido\_proveedor \linebreak nombre \linebreak apellidos \linebreak dirección \linebreak provincia \linebreak numero\_de\_teléfono\\
+	\hline	
+	\end{tabular}
+	\end{center}
+	
+	\subsection{Relaciones}
+	
+	En este ejercicio hay 3 relaciones \textbf{1:N} entre \textbf{Cliente-Compra}, \textbf{Producto-Compra} y \textbf{Producto-Proveedores}. Pues se menciona que \textit{``Un cliente puede comprar varios productos en el establecimiento y un mismo producto puede ser comprado por varios clientes.''} esto es una relación N:M entre cliente-producto, pero tambien se menciona el verbo y una entidad ''Compra`` por lo que la relación pasa a ser entre y a través de Compra. También se menciona \textit{``Un mismo producto puede ser suministrado por varios proveedores.''} es decir la relación 1:N entre un producto y sus proveedores.
+	
+	
+	\section{Diagrama\\}
+	
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{./objetos}~\\[1cm] 
+	\end{center}
+	
+	\subsection{Conceptos}
+	
+	\paragraph{Variable.} Es una valor que cambia en POO y corresponde a un atributo de la entidad
+	\paragraph{Método.} Es una función, es decir un procedimiento que reciben un valor para regresar o no otro a partir de este.
+	\paragraph{Parámetro.} Es el valor o argumentos que son dados a los métodos.
+	
+    
+    \subsection{Explicación}
+    En el diagrama se observan las relaciones 1:N entre Prod-Prov, Prod-Order y Customer-Order, asi como sus principales atrubutos, de los cuales los de tipo ``codigo\_entidad'' pasaron simplemente a id, pues al ser objetos no hace falta recalcar a que pertenece el id, cada uno de estos atributos de tipos primitivos en programación (no de tipos de datos de la BD). Por otro lado se observan los métodos, en forma de verbos de los objetos, por ejemplo a pesar del tipo de relación entre C-O la mayoria de los métodos pasan a Costumer, pues es el cliente quien realiza la acción de comprar. 
+    
+    \section{Conclusión}
+    Elegí este modelo por que, aparte de su utilidad implícita en la programación orientada a objetos en general, en mi opinión es la mas útil al momento de pasar a la practica, pues actualmente se trabaja mas con ORMs o incluso con una simple implementación de alguna interfaz de las consultas que con consultas puras en SQL u otro QueryLanguage.\\
+    
+    Esto hace que en la practica se usen objetos para interactuar con la BD, es decir que el modelo orientado objetos nos permite tener una visualización real de las interacciones y accesibilidad que tendrán nuestros objetos, que es con lo finalmente estaremos usando, otra razón es que es muy útil si se requiere modelar una base de datos NoSQL basada en documentos, pues al estar basada en objetos planos, este modelado es el mas apegado a lo requerido.
+	
+	\pagebreak
+	\begin{thebibliography}{9}	
+	
+	\bibitem{torontouni} Departament of Computer Science. 
+		\emph{Lecture 11: Object Oriented Modelling}. University of Toronto, [Disponible en: http://www.cs.toronto.edu/~sme/CSC340F/slides/11-objects.pdf].
+	
+		\bibitem{rrhopkins} Robert J. Robbins. 
+		\emph{Database Fundamentals}. Johns Hopkins University, [Disponible en: http://www.esp.org/db-fund.pdf].
+		
+		\bibitem{elmasriynavathe} Ramez Elmasri and Shamkant Navathe. 
+		\emph{Fundamentals of Database Systems}. Pearson Education, [Disponible en: http://tinman.cs.gsu.edu/~raj/4710/f11/Ch01.pdf].
+
+	\end{thebibliography}
+
+\end{document}
