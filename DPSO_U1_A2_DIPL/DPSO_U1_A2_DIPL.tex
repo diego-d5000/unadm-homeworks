@@ -25,14 +25,35 @@
 	
 	\section{MindMap}
 	\section{Memoria}
+	La memoria es un espacio de trabajo para el CPU, este es temporal, y es donde el procesador almacena y ejecuta las instrucciones.
+	
+	Hay diferentes tipo de memoria y estas varían en costos, velocidad de escritura-lectura, capacidad, las mas conocidas son:
+	
+	\begin{itemize}
+	\item \textbf{ROM.} Read-Only Memory, es una memoria de solo lectura, o de no muy común o difícil escritura, en este normalmente se almacena una serie de instrucciones que hacen ``arrancar'' el equipo, esta memoria no es volátil (conserva los datos aún sin energía eléctrica), la mas conocida es la EEPROM (Eelectrically Erasable Programmable ROM).
+	
+	\item \textbf{DRAM.} Dynamic Random Access Memory, o mas conocida como solo RAM, es la memoria principal de una computadora, en esta se pueden almacenar una cantidad considerada de bits para poder ejecutar programas, es dinámica lo cual al no haber energía eléctrica se pierde la información, así como tambien debe estarse ``refrescando'' la información (leer y reescribir) para que no se pierda al bajar el voltaje de los capacitores.
+	
+	\item \textbf{SRAM.} Static RAM, es un tipo de memoria utilizado normalmente en el procesador como memorias caché, estas memorias son de nivel 1, 2 y/o 3 (dependiendo del procesador), por lo que son un intermedio entre los registros del CPU y la RAM.
+    \end{itemize}	 
+	
 	\section{Técnicas de Administración de Memoria}
-	\section{Jerarquía de Memoria}	
+		
+	
+	
+	\section{Jerarquía de Memoria}
+	La jerarquía entre las memorias de una computadora esta dada por niveles que van del 0 al n, siendo el nivel 0 los registros del CPU.\\
+	
+	A mayor nivel, mayor es el costo y la velocidad de trasferencia de datos pero menor es la densidad (capacidad de almacenamiento), esto quiere decir que los registros del CPU tienen la mayor jerarquía al ser la memoria a la cual recurre el procesador para leer y ejecutar.\\
+	
+	La jerarquía sirve para poder dar un mejor rendimiento a los programas, ya que cada una sirve de caché a el siguiente nivel en la jerarquía, es decir que para cada k, el dispositivo mas rápido y pequeño en el nivel k, sirve de caché a el dispositivo más lento y grande en el nivel k+1. Por ejemplo, el cache L2 sirve de cache a la memoria RAM.\\
 	
 	\pagebreak
 	\begin{thebibliography}{9}
-		\bibitem{Operating System Concepts} Silberschatz, A. Baer P. Gagne G.(2013).
-		\emph{Sistemas operativos modernos}. USA: Willey.
-		
+		\bibitem{OperatingSystemConcepts} Silberschatz, A. Baer P. Gagne G.(2013).
+		\emph{Operating System Concepts}. USA: Wiley.
+		\bibitem{memherarchy} Bryant Randy \& O’Hallaron Dave.
+		\emph{The Memory Hierarchy}. USA: Carnegie Mellon University.
 	\end{thebibliography}
 	
 	
