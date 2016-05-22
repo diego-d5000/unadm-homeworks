@@ -1,0 +1,112 @@
+\documentclass[spanish,12pt,letterpapper]{article}
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[width=0.6\textwidth]{../logoUnADM}~\\[1cm] 
+			\textsc{Universidad Abierta y a Distancia de México}\\[0.8cm]
+			\textsc{Desarrollo de Software}\\[1.8cm]
+			
+			\textbf{ \Large Actividad 2. Análisis de Requerimientos}\\[3cm]
+			
+			Diego Antonio Plascencia Lara\\ ES1421004131 \\[0.4cm]
+			Facilitador(a): Martín Antonio Santos Romero\\
+			Asignatura: Introducción a la Ingeniería de Software\\
+			Grupo: DS-DIIS-1601-B2-006 \\
+			Unidad: II \\
+			
+			\vfill México D.F\\{\today}
+			
+		\end{center}
+	\end{titlepage}
+	
+	\section{Caso de estudio}
+	Para esta actividad se plantea el caso de una empresa de manufactura de piel llamada Élite, el cual requiere un sistema para el control de las existencias de un almacén de materia prima. Se tiene un audio donde se puede escuchar la platica que tienen para recabar todos los requerimientos de el cliente en este caso Javier Mendoza. El audio se encuentra en el siguiente link:\\
+	\url{https://unadmexico.blackboard.com/bbcswebdav/institution/DCEIT/2016_S1-B2/DS/03/DIIS/U2/Descargables/Empresa_manufacturera_de_producto_de_piel_elite.mp3}
+	
+	También a partir de el cuestionario enviado a el dueño se obtuvieron los siguientes requerimientos:
+	
+	\begin{itemize}
+	\item Control de información (diseños, facturas, nómina, materia prima).
+	\item Se requiere que el sistema maneje cantidades de la materia prima, que mande alertas cuando quede un 10\% del material para poder solicitarlo y no comprar ni más ni menos.
+	\item Se deben manejar notas de pedidos, órdenes de compra, devolución de material, solo con su respectiva nota saldrá material.
+	\item Reportes y gráficas
+	\item Control de accesos al sistema de software, solamente deben acceder usuarios: compras, vendedores, almacén, diseñadores, administrador.
+	\item Acceso al sistema desde cualquier lugar.
+	\item Que el sistema no sea difícil de acceder.
+	\item Diversificación de línea de productos (fabricación de bolsas, chamarras, entre otros), por lo que se requiere de modificar el sistema de ventas, el manejo de productos en el almacén y control de inventario.
+	\end{itemize}
+	
+	\section{Organizador Gráfico}
+	
+	\begin{tabular}{|p{5cm}|p{7cm}|}
+	\hline
+	\textbf{Requerimiento} & Clasificación\\
+	\hline
+	Control de información de propiedad intelectual, finanzas, inventario. & Funcional. Por que menciona un modulo del sistema entero, que es el modulo de información.  \\
+	\hline
+	Alertas de stock al 10\% de su capacidad & Funcional. Es una feature especifica.\\
+	\hline
+	Control de entradas y salidas en almacén por medio de notas & Usuario. No se involucra al sistema, solo se hace mención de un proceso en lenguaje natural.\\
+	\hline
+	Reportes y Gráficas & Mal Redactado. Nuevamente denota una característica especifica.\\
+	\hline
+	Control de accesos & No Funcional. Se menciona al sistema como una sola entidad, dando una restricción general.\\
+	\hline
+	Acceso al sistema desde cualquier lugar & No Funcional. Nuevamente se menciona a el sistema como una sola cosa.\\
+	\hline
+	Que el sistema no sea difícil de acceder & Usuario, Mal Redactado. Se refiere a el sistema como un todo y es inmedible el "fácil acceso".\\
+	\hline
+	El sistema debe tener la capacidad de alterar la información sobre ventas, productos y almacén & Funcional. Es una característica especifica. \\
+	\hline
+\end{tabular}	  
+	
+	\section{Módulos}
+	\paragraph{Modulo de Finanzas.} Este modulo contiene principalmente el requerimiento 1, donde se debe llevar el control de nominas, facturas, inventario, ventas, y toda la información financiera. Este modulo se comunicara frecuentemente con el de Producto.
+	\paragraph{Modulo de Diseños.} Es un modulo especialmente diseñado para almacenar los importantes diseños y patrones de los productos que se venden, es importante por que representa el valor de la empresa.
+	\paragraph{Modulo de Administración.} Este modulo se alimentara de la información de los demás módulos, para mostrar reportes y gráficas de fácil lectura, para poder tener conocimiento del estado general de el negocio.
+	\paragraph{Modulo de Control de Producto.} En este modulo se concentra todo lo relacionado a el almacén, el cual lleva el control de todo lo que entra y sale de este, por lo que tiene una estrecha relación con los requerimientos 2,3 y 8 pues en este esta lo relacionado a ventas, devoluciones, etc.
+	
+	\section{Selección}
+	Un modulo con poca información es el de Administración, pues solo se mencionan los reportes y gráficas, y aunque en la entrevista se menciono que se otorgarían ejemplos, hace falta mas información acerca de la información que necesita el dueño para visualizar en los reportes, gráficas y todo el modulo administrativo.
+	
+	La información que se necesita principalmente es la definición de conceptos administrativos, formulas y esquemas de reportes.
+	
+	\subsection{Escenario}
+	\begin{tabular}{|p{10cm}|}
+	\hline
+	\textbf{Suposición Inicial.}\\
+	El dueño hace revisiones constantes a el sistema para verificar la situación actual general de la empresa, obteniendo información de toda transacción a través de reportes y gráficas\\
+	\hline
+	\textbf{Normal.}\\
+	El dueño abre desde un navegador el sistema principal, en el cual debe ingresar su usuario y contraseña para poder entrar desde cualquier parte de forma segura.
+	
+	Al momento de entrar el dueño observa gráficas sencillas para poder interpretar de manera visual el estado de la empresa, pudiendo filtrar la información.\\
+	\hline
+	\textbf{Que Puede Ir Mal.}\\
+	El dueño no cuenta con conexión a Internet, este solo podrá consultar información ya obtenida anteriormente por medio de un cache.
+	
+	El dueño no encuentra lo que busca por medio de filtros, se puede emplear un buscador y tags para poder clasificar personalmente la información.\\
+	\hline
+	\textbf{Otras Actividades}
+	Otros módulos del sistema se pueden utilizar independientes al mismo tiempo.\\
+	\hline
+	\textbf{Estado del sistema al completarse}
+	El dueño sale del sistema una vez visualizada la información requerida.\\
+	\hline
+	\end{tabular}
+	
+	\pagebreak
+	\begin{thebibliography}{9}
+	\bibitem{CompSciMag}  Maheshwari, Shikha. 
+		\emph{A Comparative Analysis of Different types of Models in Software Development Life Cycle} (2012). International Journal of Advanced Research in Computer Science and Software Engineering. [Disponible en: http://www.ijarcsse.com/docs/papers/May2012/Volum2\_issue5/V2I500405.pdf ]
+		
+		\bibitem{sommerville}  Sommerville, Ian. 
+		\emph{Software engineering} (2011). USA:  Pearson Education. 9th ed. 
+		
+	\end{thebibliography}
+	
+\end{document}

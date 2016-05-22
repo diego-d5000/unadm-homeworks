@@ -1,0 +1,78 @@
+\documentclass[spanish,12pt,letterpapper]{article}
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[width=0.6\textwidth]{../logoUnADM}~\\[1cm] 
+			\textsc{Universidad Abierta y a Distancia de México}\\[0.8cm]
+			\textsc{Desarrollo de Software}\\[1.8cm]
+			
+			\textbf{ \Large Evidencia de aprendizaje 2. Diagramas del dominio e interacción}\\[3cm]
+			
+			Diego Antonio Plascencia Lara\\ ES1421004131 \\[0.4cm]
+			Facilitador(a): Martín Antonio Santos Romero\\
+			Asignatura: Introducción a la Ingeniería de Software\\
+			Grupo: DS-DIIS-1601-B2-006 \\
+			Unidad: II \\
+			
+			\vfill México D.F\\{\today}
+			
+		\end{center}
+	\end{titlepage}
+	
+	\section{Caso de estudio}
+	Para esta actividad se plantea el caso de una empresa de manufactura de piel llamada Élite, el cual requiere un sistema para el control de las existencias de un almacén de materia prima. Se tiene un audio donde se puede escuchar la platica que tienen para recabar todos los requerimientos de el cliente en este caso Javier Mendoza. El audio se encuentra en el siguiente link:\\
+	\url{https://unadmexico.blackboard.com/bbcswebdav/institution/DCEIT/2016_S1-B2/DS/03/DIIS/U2/Descargables/Empresa_manufacturera_de_producto_de_piel_elite.mp3}
+	
+	También a partir de el cuestionario enviado a el dueño se obtuvieron los siguientes requerimientos:
+	
+	\begin{itemize}
+	\item Control de información (diseños, facturas, nómina, materia prima).
+	\item Se requiere que el sistema maneje cantidades de la materia prima, que mande alertas cuando quede un 10\% del material para poder solicitarlo y no comprar ni más ni menos.
+	\item Se deben manejar notas de pedidos, órdenes de compra, devolución de material, solo con su respectiva nota saldrá material.
+	\item Reportes y gráficas
+	\item Control de accesos al sistema de software, solamente deben acceder usuarios: compras, vendedores, almacén, diseñadores, administrador.
+	\item Acceso al sistema desde cualquier lugar.
+	\item Que el sistema no sea difícil de acceder.
+	\item Diversificación de línea de productos (fabricación de bolsas, chamarras, entre otros), por lo que se requiere de modificar el sistema de ventas, el manejo de productos en el almacén y control de inventario.
+	\end{itemize}
+	
+	\section{Diagramas}
+	El modulo elegido en la actividad anterior fue el modulo de Administración, el cual su principal función es mostrar información, gráficas y reportes de el estado general actual de la empresa, y este modulo es con el que continuare para hacer los diagramas de clases y de colaboración.
+	
+	
+	\subsection{Diagrama de clases}
+	\begin{center}
+	\includegraphics[width=0.6\textwidth]{./classesdiagram}~\\[1cm] 
+	\end{center}
+	
+	\begin{tabular}{|p{10cm}|}
+	\hline
+	\textbf{Nombre del diagrama:} Clases Modulo Administración Élite\\
+	\hline
+	\textbf{Elementos} \linebreak
+	Interfaces: Chart. \linebreak
+	Clases:
+	BarChart
+	PieChart
+	LineChart
+	Report
+	RichTextReport\\
+	\hline
+	\textbf{Descripción}
+	En este diagrama se muestran las clases de las gráficas y reportes, que representan lo esencial del requerimiento del cual surgió este modulo. Toda Gráfica (Chart interface) tiene los métodos de dibujar, borrar y re-dibujar, que cambian dependiendo del tipo de gráfica. Como la gráfica de pastel que a partir de un conjunto de datos llave-valor puede dibujarse la gráfica. Por otro lado el esta el Reporte sencillo el cual es texto plano, por lo que hay un Reporte de Texto Enriquecido el cual extiende el reporte para poder incluir imágenes y gráficas.  \\
+	\hline
+	\end{tabular}
+	
+	\pagebreak
+	\begin{thebibliography}{9}
+		
+		\bibitem{sommerville}  Sommerville, Ian. 
+		\emph{Software engineering} (2011). USA:  Pearson Education. 9th ed. 
+		
+	\end{thebibliography}
+	
+\end{document}

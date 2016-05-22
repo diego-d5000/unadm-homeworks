@@ -1,0 +1,80 @@
+\documentclass[spanish,12pt,letterpapper]{article}
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[width=0.6\textwidth]{../logoUnADM}~\\[1cm] 
+			\textsc{Universidad Abierta y a Distancia de México}\\[0.8cm]
+			\textsc{Desarrollo de Software}\\[1.8cm]
+			
+			\textbf{ \Large Actividad 3. Casos de Uso}\\[3cm]
+			
+			Diego Antonio Plascencia Lara\\ ES1421004131 \\[0.4cm]
+			Facilitador(a): Martín Antonio Santos Romero\\
+			Asignatura: Introducción a la Ingeniería de Software\\
+			Grupo: DS-DIIS-1601-B2-006 \\
+			Unidad: II \\
+			
+			\vfill México D.F\\{\today}
+			
+		\end{center}
+	\end{titlepage}
+	
+	\section{Caso de estudio}
+	Para esta actividad se plantea el caso de una empresa de manufactura de piel llamada Élite, el cual requiere un sistema para el control de las existencias de un almacén de materia prima. Se tiene un audio donde se puede escuchar la platica que tienen para recabar todos los requerimientos de el cliente en este caso Javier Mendoza. El audio se encuentra en el siguiente link:\\
+	\url{https://unadmexico.blackboard.com/bbcswebdav/institution/DCEIT/2016_S1-B2/DS/03/DIIS/U2/Descargables/Empresa_manufacturera_de_producto_de_piel_elite.mp3}
+	
+	También a partir de el cuestionario enviado a el dueño se obtuvieron los siguientes requerimientos:
+	
+	\begin{itemize}
+	\item Control de información (diseños, facturas, nómina, materia prima).
+	\item Se requiere que el sistema maneje cantidades de la materia prima, que mande alertas cuando quede un 10\% del material para poder solicitarlo y no comprar ni más ni menos.
+	\item Se deben manejar notas de pedidos, órdenes de compra, devolución de material, solo con su respectiva nota saldrá material.
+	\item Reportes y gráficas
+	\item Control de accesos al sistema de software, solamente deben acceder usuarios: compras, vendedores, almacén, diseñadores, administrador.
+	\item Acceso al sistema desde cualquier lugar.
+	\item Que el sistema no sea difícil de acceder.
+	\item Diversificación de línea de productos (fabricación de bolsas, chamarras, entre otros), por lo que se requiere de modificar el sistema de ventas, el manejo de productos en el almacén y control de inventario.
+	\end{itemize}
+	
+	\section{Diagrama de casos de uso}
+	Para esta actividad voy a diagramar el modulo de administración de el sistema para la empresa manufacturera de piel ``Élite'', el cual muestra reportes y gráficas a el dueño para su análisis y este modulo se alimenta de los demás para mostrar la información.
+	
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{./usecasesElite}~\\[1cm] 
+	\end{center}
+	
+	\begin{tabular}{|p{10cm}|}
+	\hline
+	\textbf{Nombre del diagrama:} Casos de uso Élite\\
+	\hline
+	\textbf{Elementos} \linebreak
+	Actores: Administrador. \linebreak
+	Casos de Uso:
+	Graficar perdidas y ganancias.
+	Graficar valores.
+	Consultar información de módulos.
+	Obtener reportes.
+	Gestionar módulos.
+	Gestionar permisos.
+	Visualizar control de usos en el sistema.\\
+	\hline
+	\textbf{Descripción}
+	En este diagrama se puede observar las interacciones que tiene el usuario/actor (en este caso unicamente el dueño o administrador) con el sistema, pues el Administrador va a visualizar las gráficas de perdidas y ganancias que hereda de Graficar variables de información en el sistema, también debe obtener reportes, para ambos se debe comunicar el sistema con otros módulos como el de finanzas y almacén. Por ultimo gestiona otros módulos como los permisos, así como puede tener un resumen de las actividades de otros usuarios.  \\
+	\hline
+	\end{tabular}
+	
+	\pagebreak
+	\begin{thebibliography}{9}
+	\bibitem{CompSciMag}  Maheshwari, Shikha. 
+		\emph{A Comparative Analysis of Different types of Models in Software Development Life Cycle} (2012). International Journal of Advanced Research in Computer Science and Software Engineering. [Disponible en: http://www.ijarcsse.com/docs/papers/May2012/Volum2\_issue5/V2I500405.pdf ]
+		
+		\bibitem{sommerville}  Sommerville, Ian. 
+		\emph{Software engineering} (2011). USA:  Pearson Education. 9th ed. 
+		
+	\end{thebibliography}
+	
+\end{document}
